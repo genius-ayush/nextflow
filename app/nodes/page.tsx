@@ -1,6 +1,7 @@
-export default function Nodes(){
-    
-    return(
-        <div>this is node page</div>
-    )
+import NodesPage from "@/components/NodesPage/Nodes";
+
+export default function page(){
+  return(
+    <NodesPage/>
+  )
 }
