@@ -92,7 +92,7 @@ export default function DockDemo() {
     <div className="flex flex-col items-center justify-center text-white">
       
       <TooltipProvider>
-        <Dock direction="bottom">
+        <Dock direction="middle">
           {DATA.navbar.map((item) => (
             <DockIcon key={item.label}>
               <Tooltip>
@@ -140,4 +140,4 @@ export default function DockDemo() {
       </TooltipProvider>
     </div>
   )
-}
+} 
