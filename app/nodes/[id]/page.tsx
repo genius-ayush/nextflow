@@ -1,12 +1,12 @@
 
 import Dock from "@/components/WorkflowPage/dock";
-import { Workflow } from "@/components/WorkflowPage/workflow";
+import Index from "@/components/WorkflowPage/Index";
 
 export default function page(){
 
   return(
     <div className="text-white">
-      <Workflow/>
+      <Index/>
       <Dock/>
     </div>
   )

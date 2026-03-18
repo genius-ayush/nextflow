@@ -108,7 +108,7 @@ const CanvasInner = () => {
   );
 };
 
-export const Workflow = () => {
+export const Canvas = () => {
   return (
     <ReactFlowProvider>
       <CanvasInner />

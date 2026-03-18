@@ -1,47 +1,47 @@
-// import { task } from "@trigger.dev/sdk";
-// import { GoogleGenerativeAI } from "@google/generative-ai";
+import { task } from "@trigger.dev/sdk";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
-// export const llmTask = task({
-//  id: "gemini-llm",
-//  run: async (payload) => {
+export const llmTask = task({
+ id: "gemini-llm",
+ run: async (payload) => {
 
-//   const genAI = new GoogleGenerativeAI(process.env.GEMINI_KEY);
+  const genAI = new GoogleGenerativeAI(process.env.GEMINI_KEY);
 
-//   const model = genAI.getGenerativeModel({
-//    model: payload.model
-//   });
+  const model = genAI.getGenerativeModel({
+   model: payload.model
+  });
 
-//   const result = await model.generateContent(payload.prompt);
+  const result = await model.generateContent(payload.prompt);
 
-//   return result.response.text();
-//  }
-// });
+  return result.response.text();
+ }
+});
 
 
-// export const cropImageTask = task({
-//  id: "crop-image",
+export const cropImageTask = task({
+ id: "crop-image",
 
-//  run: async ({ imageUrl, crop }) => {
+ run: async ({ imageUrl, crop }) => {
 
-//   // download file
+  // download file
 
-//   // run ffmpeg crop
+  // run ffmpeg crop
 
-//   // upload via transloadit
+  // upload via transloadit
 
-//   return { croppedImageUrl };
+  return { croppedImageUrl };
 
-//  }
-// });
+ }
+});
 
-// export const extractFrameTask = task({
-//  id: "extract-frame",
+export const extractFrameTask = task({
+ id: "extract-frame",
 
-//  run: async ({ videoUrl, timestamp }) => {
+ run: async ({ videoUrl, timestamp }) => {
 
-//   // ffmpeg extraction
+  // ffmpeg extraction
 
-//   return { frameUrl };
+  return { frameUrl };
 
-//  }
-// });
+ }
+});
